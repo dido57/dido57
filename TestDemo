@@ -1,0 +1,13 @@
+package com.xiaoshan.demo;
+
+import java.io.File;
+
+public class TestDemo {
+	public static void main(String[] args) throws Exception {
+		File file = new File("d:" + File.separator + "demo" + File.separator + "hello" + File.separator + "xiaoshan" + File.separator + "test.txt");                      	//设置文件的路径
+		if (!file.getParentFile().exists()){   
+			file.getParentFile().mkdirs();	
+		}
+		System.out.println(file.createNewFile());
+	}
+}

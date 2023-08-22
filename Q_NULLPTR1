@@ -1,0 +1,21 @@
+class Finddialog : public QWidget
+{
+    Q_OBJECT
+ 
+public:
+    Finddialog(QWidget *parent = Q_NULLPTR);
+private:
+    Ui::FinddialogClass* ui;
+    QPushButton* closeButton;
+public slots:
+    void close_window();
+};
+
+public slots:
+    void see_food(QString &food)
+    {
+        if (is_hungry())
+        {
+            emit want_eat(food);
+        }
+    }
